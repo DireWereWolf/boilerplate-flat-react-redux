@@ -1,0 +1,62 @@
+{
+  "preset": "airbnb",
+  "requireSpacesInsideObjectBrackets": null,
+  "excludeFiles": [
+    "dist/*",
+    ".jscsrc",
+    "node_modules",
+    "gulpfile.js",
+    "webpack.config.js"
+  ],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowMultipleSpaces": {
+    "allowEOLComments": true
+  },
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpacesInFunctionDeclaration": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideBrackets": true,
+  "disallowSpacesInsideObjectBrackets": true,
+  "disallowSpacesInsideParentheses": true,
+  "disallowTabs": true,
+  "maximumLineLength": {
+    "value": 120,
+    "allExcept": ["urlComments", "regex"]
+  },
+  "requireCamelCaseOrUpperCaseIdentifiers": {
+    "allowedSuffixes": ["_Id", "_Guid"]
+  },
+  "requireSpacesInFunctionDeclaration": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireTrailingComma": false,
+  "safeContextKeyword": ["self"],
+  "validateQuoteMarks": {
+    "escape": true,
+    "mark": "'",
+    "ignoreJSX": true
+  },
+  "validateIndentation": 2,
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch"
+  ]
+}

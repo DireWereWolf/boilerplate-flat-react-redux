@@ -1,0 +1,9 @@
+.idea
+.tmp
+stats.json
+node_modules
+/npm-debug.log
+dist
+*.sublime-*
+.tern-port
+.DS_Store

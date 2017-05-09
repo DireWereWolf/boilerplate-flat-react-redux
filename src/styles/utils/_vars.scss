@@ -1,0 +1,28 @@
+// === Vars of app ===
+
+//==============
+//   COLORS
+//==============
+
+// Theme
+// Allowed values: Dark, Light, Default
+$theme: Default;
+
+$main-color: #000;
+$secondary-color: red;
+$ternary-color: orange;
+
+$text-color: $main-color;
+$link-color: blue;
+$menu-item-color: $ternary-color;
+
+// Theming example
+@if $theme == Dark {
+  $main-color: #fff;
+  $secondary-color: #999;
+  $ternary-color: #111;
+} @else if $theme == Light {
+  $main-color: #ccc;
+  $secondary-color: #000;
+  $ternary-color: yellow
+};
