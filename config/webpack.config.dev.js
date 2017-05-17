@@ -57,12 +57,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
         use: [
-          { loader: 'style-loader' },
+          {loader: 'style-loader'},
           {
             loader: 'css-loader',
             options: {
@@ -70,9 +70,10 @@ module.exports = {
             }
           },
           {
-            loader: 'autoprefixer-loader',
+            loader: 'postcss-loader',
             options: {
-              browsers: ["last 2 versions", "ie >= 9", "Opera >= 20"]
+              browsers: ['last 2 versions', 'ie >= 9', 'Opera >= 20'],
+              sourceMap: true
             }
           },
           {
@@ -173,8 +174,8 @@ module.exports = {
     port: 3000,
     compress: true,
     hot: true,
-    stats: "errors-only",
+    stats: 'errors-only',
     open: false,
-    clientLogLevel: "none"
+    clientLogLevel: 'none'
   }
 };
