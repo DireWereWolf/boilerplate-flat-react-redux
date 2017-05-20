@@ -17,7 +17,14 @@ To debug global application state use [redux-devtools-extension](https://github.
 
 ## Coding agreement
 
-Lets start using editorconfig and jscs for this project. This help us to have one code style for the whole project. All code styles rules should be specified in `/.editorconfig`, `/.eslintrc`, `/.jscsrc` or `/.stylintrc`.
+Lets start using editorconfig and jscs for this project.
+This help us to have one code style for the whole project.
+All code styles rules should be specified in
+`/.editorconfig`, `/.eslintrc`, `/.jscsrc` or `/.scss-lint.yml`.
+
+P.s. For configure scss linter you need install gem install scss_lint
+( on Windows  you also need install Ruby previously )
+This [guide](https://github.com/brigade/scss-lint#installation) will be useful
 
 ## Add/remove icon
 

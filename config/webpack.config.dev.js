@@ -172,10 +172,10 @@ module.exports = {
   devServer: {
     contentBase: build,
     port: 3000,
+    clientLogLevel: 'none',
     compress: true,
     hot: true,
     stats: 'errors-only',
-    open: false,
-    clientLogLevel: 'none'
+    open: false
   }
 };
