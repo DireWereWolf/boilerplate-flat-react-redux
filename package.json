@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-flat-react-redux",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Miroshnichenko Artyom <mad.n.head@gmail.com>",
   "main": "index.js",
   "license": "MIT",
@@ -21,11 +21,11 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.1",
@@ -42,8 +42,6 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
-    "stylelint": "^7.10.1",
-    "stylelint-scss": "^1.4.4",
     "svg-sprite-loader": "^2.0.5",
     "svgo": "^0.7.2",
     "svgo-loader": "^1.2.1",

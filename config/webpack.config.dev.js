@@ -3,15 +3,13 @@ const webpack = require('webpack');
 
 // Custom app path import
 const {
-  root,
   src,
   build,
-  actions,
-  reducers,
-  components,
-  images,
   styleUtils
 } = require('./paths');
+
+// Aliases
+const WebpackAliases = require('./aliases');
 
 // Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -44,11 +42,9 @@ module.exports = {
         query: {
           cacheDirectory: true,
           presets: ['react', 'es2015'],
-          // TODO add and test plugins
-          // plugins: [
-          //   'transform-function-bind',
-          //   'transform-class-properties'
-          // ]
+          plugins: [
+            'transform-class-properties'
+          ]
         }
       },
       {
@@ -149,12 +145,7 @@ module.exports = {
     ]
   },
   resolve: {
-    alias: {
-      actions: actions,
-      components: components,
-      images: images,
-      reducers: reducers
-    }
+    alias: WebpackAliases
   },
   plugins: [
     new HtmlWebpackPlugin(
@@ -171,7 +162,7 @@ module.exports = {
   ],
   devServer: {
     contentBase: build,
-    port: 3000,
+    port: 8000,
     clientLogLevel: 'none',
     compress: true,
     hot: true,

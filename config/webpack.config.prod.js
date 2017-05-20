@@ -2,15 +2,13 @@ const path = require('path');
 
 // Custom app path import
 const {
-  root,
   src,
   dist,
-  actions,
-  reducers,
-  components,
-  images,
   styleUtils
 } = require('./paths');
+
+// Aliases
+const WebpackAliases = require('./aliases');
 
 // Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -18,7 +16,7 @@ const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 
 // Options
 const extractSass = new ExtractTextWebpackPlugin({
-  filename: "[name].[hash:6].css"
+  filename: '[name].[hash:6].css'
 });
 
 const svgoPlugins = [
@@ -48,11 +46,9 @@ module.exports = {
         query: {
           cacheDirectory: true,
           presets: ['react', 'es2015'],
-          // TODO add and test plugins
-          // plugins: [
-          //   'transform-function-bind',
-          //   'transform-class-properties'
-          // ]
+          plugins: [
+            'transform-class-properties'
+          ]
         }
       },
       {
@@ -61,16 +57,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
         use: extractSass.extract([
           'css-loader',
           {
-            loader: 'autoprefixer-loader',
+            loader: 'postcss-loader',
             options: {
-              browsers: ["last 2 versions", "ie >= 9", "Opera >= 20"]
+              browsers: ['last 2 versions', 'ie >= 9', 'Opera >= 20']
             }
           },
           {
@@ -146,12 +142,7 @@ module.exports = {
     ]
   },
   resolve: {
-    alias: {
-      actions: actions,
-      components: components,
-      images: images,
-      reducers: reducers
-    }
+    alias: WebpackAliases
   },
   plugins: [
     new HtmlWebpackPlugin(
