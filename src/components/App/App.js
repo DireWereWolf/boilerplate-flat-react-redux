@@ -11,7 +11,7 @@ import './App.scss';
 const App = (props) => {
   return (
     <div className="app">
-      Here app component
+      Here app components
     </div>
   );
 };
