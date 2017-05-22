@@ -9,7 +9,9 @@
     "dev:watch": "rimraf ./.tmp/* && webpack-dev-server --config ./config/webpack.config.dev.js --watch",
     "prod": "rimraf ./dist/* && webpack --config ./config/webpack.config.prod.js -p",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:update": "jest -u",
+    "test:coverage": "jest --coverage",
     "clear": "rimraf ./dist && rimraf ./.tmp"
   },
   "dependencies": {

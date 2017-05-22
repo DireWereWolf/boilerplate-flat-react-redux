@@ -10,8 +10,8 @@ test('App should rendered as expected', () => {
   // console.log(tree);
 
   // Test for inner contains of element
-  // expect(component.contains('Here app component')).toBe(true);
+  // expect(component.contains('Here app components')).toBe(true);
 
   // Creating new snapshot
-  // expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
