@@ -62,6 +62,9 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              modules: true,
+              localIdentName: '[name]-[local]-[hash:base64:6]',
+              camelCase: true,
               sourceMap: true
             }
           },
@@ -153,7 +156,7 @@ module.exports = {
         title: 'App title',
         // favicon: path.join(src, 'favicon.ico'),
         template: path.join(src, 'index.html'),
-        inject: 'head',
+        inject: 'body',
         hash: true
       }
     ),
