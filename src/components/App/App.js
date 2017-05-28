@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './App.scss';
+import styles from './App.scss';
 
 /**
  * App - Root app component
@@ -11,7 +11,7 @@ import './App.scss';
  */
 const App = (props) => {
   return (
-    <div className="app">
+    <div className={styles.app}>
       Here app component
     </div>
   );

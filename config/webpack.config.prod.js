@@ -62,7 +62,14 @@ module.exports = {
       {
         test: /\.scss$/,
         use: extractSass.extract([
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]-[local]-[hash:base64:6]',
+              camelCase: true,
+            }
+          },
           {
             loader: 'postcss-loader',
             options: {

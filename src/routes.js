@@ -6,15 +6,16 @@ import { Provider } from 'react-redux';
 
 import store from './store/store';
 
-import App from 'components/App/App'
+import App from 'components/App/App';
 
-
-export default (
+const Routes = () => (
   <Provider store={store}>
     {/*<Router history={History}>*/}
-      <div>
-        <App/>
-      </div>
+    <div>
+      <App/>
+    </div>
     {/*</Router>*/}
   </Provider>
 );
+
+export default Routes;
