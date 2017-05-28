@@ -38,6 +38,7 @@
     "jscs": "^3.0.7",
     "node-sass": "^4.5.2",
     "postcss-loader": "^2.0.3",
+    "prop-types": "^15.5.10",
     "redux-devtools-extension": "^2.13.2",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
